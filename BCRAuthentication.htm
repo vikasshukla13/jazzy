@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="Sample.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>BCRAuthentication</title>
+<link rel="StyleSheet" href="Sample.css" type="text/css" />
+</head>
+
+<body>
+<h2>Class: BCRAuthentication</h2>
+<p>This class includes the following methods:</p>
+<ul style="list-style: disc;">
+	<li><a href="#Method:_verifyPhoneNumber">verifyPhoneNumber</a></li>
+	<li><a href="#Method:_verifyOTP">verifyOTP</a></li>
+	<li><a href="#Method:_isLoggedInUser">isLoggedInUser</a></li>
+	<li><a href="#Method:_showContacts">showContacts</a></li>
+	<li><a href="#Method:_updateUser">updateUser</a></li>
+	<li><a href="#Method:_refreshToken">refreshToken</a></li>
+</ul>
+<h3><a name="Method:_verifyPhoneNumber">Method: verifyPhoneNumber</a></h3>
+<h4>Request Payload</h4>
+<table class="Table_Parameter" cellspacing="0">
+	<col width="204" />
+	<col width="379" />
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;" bgcolor="#DBDBDB"><p class="BodyText" 
+			 style="font-weight: bold;">Parameter</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;" bgcolor="#DBDBDB"><p><span 
+		 style="font-weight: bold;">Value</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>name</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">Name 
+		 of the user being registered</td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>phone</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">Phone 
+		 number to be registered</td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>onCompletion</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">Completion 
+		 handler to call back when the authorization process completes</td>
+	</tr>
+</table>
+<h4>Response Payload</h4>
+<table class="Table_Parameter" cellspacing="0">
+	<col width="204" />
+	<col width="379" />
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;" bgcolor="#DBDBDB"><p class="BodyText" 
+			 style="font-weight: bold;">Status</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;" bgcolor="#DBDBDB"><p><span 
+		 style="font-weight: bold;">Value</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>Success</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">onCompletion 
+		 block is called with nil parameter</td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>Failure</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">onCompletion 
+		 block is called with error</td>
+	</tr>
+</table>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><ul style="list-style: disc;">
+			<li><p>Creates a new application instance/account, updates 
+			 the phone number or any other attributes of an existing application 
+			 instance/account.</p></li>
+			<li><p>On successful verification of the phone number, the 
+			 OTP entry screen is displayed.</p></li>
+			<li><p>On successful verification of the phone number, the 
+			 server sends an OTP to the phone number.</p></li>
+			<li><p>On failure to verify the phone number, an error message 
+			 is sent to the server.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<h3 class="BodyText"><a name="Method:_verifyOTP">Method: verifyOTP</a></h3>
+<h4>Request Payload</h4>
+<table class="Table_Parameter" cellspacing="0">
+	<col width="204" />
+	<col width="379" />
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;"><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p><span style="font-weight: bold;">Value</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>phone</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">Phone 
+		 number to be D1registered</td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>OTP</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>6 
+		 digit OTP send to the phone number</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>onCompletion</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Completion 
+		 handler to call back when the verifaction OTP process completes</p></td>
+	</tr>
+</table>
+<h4>Response Payload</h4>
+<table class="Table_Parameter" cellspacing="0">
+	<col width="204" />
+	<col width="379" />
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;"><p class="BodyText" style="font-weight: bold;">Status</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p><span style="font-weight: bold;">Value</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>Success</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>onCompletion 
+		 block is called with 'nil' parameter</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>Failure</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>onCompletion 
+		 block is called with error</p></td>
+	</tr>
+</table>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><ul style="list-style: disc;">
+			<li><p>Verifies the 6 digit OTP to authenticate the user.</p></li>
+			<li><p>On successful verification of OTP, the 'nil' parameter 
+			 is sent.</p></li>
+			<li><p>On failure to verify the OTP, an error message is sent.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<h3><a name="Method:_isLoggedInUser">Method: isLoggedInUser</a></h3>
+<h4>Request Payload</h4>
+<p>None</p>
+<h4>Response Payload</h4>
+<p>Bool (True or False)</p>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><ul style="list-style: disc;">
+			<li><p>Checks if there is a previously authenticated user.</p></li>
+			<li><p>True if a user is already authenticated, else False.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<h3><a name="Method:_showContacts">Method: showContacts</a></h3>
+<h4>Request Payload</h4>
+<p>None</p>
+<h4>Response Payload</h4>
+<p>Bool (True or False)</p>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><ul style="list-style: disc;">
+			<li><p>Checks if the list of contacts needs to be shown.</p></li>
+			<li><p>True if the list of contacts needs to be shown, else 
+			 False.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<h3><a name="Method:_updateUser">Method: updateUser</a></h3>
+<h4>Request Payload</h4>
+<p><span class="Bold">name</span>: Name of the user being registered.</p>
+<h4>Response Payload</h4>
+<p>N/A</p>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><p>Updates the user profile.</p></td>
+	</tr>
+</table>
+<h3><a name="Method:_refreshToken">Method: refreshToken</a></h3>
+<h4>Request Payload</h4>
+<p><span class="Bold">onCompletion</span>: Completion handler to call back 
+ when the refresh token process completes.</p>
+<h4>Response Payload</h4>
+<table class="Table_Parameter" cellspacing="0">
+	<col width="204" />
+	<col width="379" />
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;"><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p><span style="font-weight: bold;">Value</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>Success</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>onCompletion 
+		 block is called with nil parameter</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>Failure</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>onCompletion 
+		 block is called with error</p></td>
+	</tr>
+</table>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><p>Refreshes the user token.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="Sample.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>BCRApp</title>
+<link rel="StyleSheet" href="Sample.css" type="text/css" />
+<style type="text/css">/*<![CDATA[*/
+body {
+	border-left-style: None;
+	border-right-style: None;
+	border-top-style: None;
+	border-bottom-style: None;
+}
+/*]]>*/</style>
+</head>
+
+<body>
+<h2>Class: BCRApp</h2>
+<p>This class includes the following methods:</p>
+<ul style="list-style: disc;">
+	<li><a href="#Method:_Configure">Configure</a></li>
+	<li><a href="#Method:_registerForRemoteNotification">registerForRemoteNotification</a></li>
+</ul>
+<h3><a name="Method:_Configure">Method: Configure</a></h3>
+<h4>Request Payload</h4>
+<p>AppConfiguration.plist</p>
+<p>&#160;</p>
+<p class="BodyText"><span class="Bold" style="font-weight: normal;">Example</span><span 
+	 class="Bold">:</span></p>
+<table class="Table_Parameter" cellspacing="0">
+	<col width="204" />
+	<col width="379" />
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;"><p class="BodyText" style="font-weight: bold;">Parameter</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p><span style="font-weight: bold;">Value</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>GrantType</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">Password</td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>ClientID</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">BoA</td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>ClientSecret</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">cwcewvewrywebiubu3webcfew3HJKjwfuefiVYUYUwfw2qw</td>
+	</tr>
+</table>
+<h4>Response Payload</h4>
+<p>If the connection is not successful, the application will crash.</p>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><ul style="list-style: disc;">
+			<li><p>The plist should be added to the client applicarion.</p></li>
+			<li><p>Configures a default BrandedCallerRest framework.</p></li>
+			<li><p>Raises an exception if any configuration step fails.</p></li>
+			<li><p>This method should be called after the app is launched 
+			 and before using BrandedCaller services.</p></li>
+			<li><p>This method does a synchronous file I/O (reading AppConfiguration.plist 
+			 from disk).</p></li>
+		</ul></td>
+	</tr>
+</table>
+<h3><a name="Method:_registerForRemoteNotification">Method: registerForRemoteNotification</a></h3>
+<h4>Request Payload</h4>
+<p><span class="Bold">token</span>: The device token received by application 
+ delegate.</p>
+<h4>Response Payload</h4>
+<p>Irrespective of whether the method fails or executes successfully, there 
+ is no response.</p>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><ul style="list-style: disc;">
+			<li><p>Sends the device token to server, saves the device token 
+			 locally.</p></li>
+			<li><p>The server uses the device token to send push notification 
+			 when the device receives a inbound call.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>
