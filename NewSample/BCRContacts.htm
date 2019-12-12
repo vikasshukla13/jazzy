@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="Sample.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>BCRContacts</title>
+<link rel="StyleSheet" href="Sample.css" type="text/css" />
+</head>
+
+<body>
+<h2>Class: BCRContacts</h2>
+<p>This class includes the following methods:</p>
+<ul style="list-style: disc;">
+	<li><a href="#Method:_fetchContacts">fetchContacts</a></li>
+	<li><a href="#Method:_fetchContactDetails">fetchContactDetails</a></li>
+</ul>
+<h3><a name="Method:_fetchContacts">Method: fetchContacts</a></h3>
+<h4>Request Payload</h4>
+<p><span class="Bold">onCompletion</span>: Completion handler to call back 
+ when the fetch contacts process completes.</p>
+<h4>Response Payload</h4>
+<table class="Table_Parameter" cellspacing="0">
+	<col width="204" />
+	<col width="379" />
+	<tr class="t1st">
+		<td style="border: Solid 1px #000000;"><p class="BodyText" style="font-weight: bold;">Status</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p><span style="font-weight: bold;">Value</span></p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>Success</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>onCompletion 
+		 block is called with</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>data</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+		 list of contacts</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>error</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Nil</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>Failure</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>onCompletion 
+		 block is called with</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>data</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Nil</p></td>
+	</tr>
+	<tr>
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000;"><p>error</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>An 
+		 error object</p></td>
+	</tr>
+</table>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><ul style="list-style: disc;">
+			<li><p>Retrieves the entire telephone numbers list from the 
+			 enterprise telephone numbers list.</p></li>
+			<li><p>On successful retrieval of phone numbers, a list of 
+			 contacts is sent.</p></li>
+			<li><p>On failure to retrieve phone numbers, an error is sent.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<h3 class="BodyText"><a name="Method:_fetchContactDetails">Method: fetchContactDetails</a></h3>
+<h4>Request Payload</h4>
+<p><span class="Bold">phone</span>: Phone number to get details.</p>
+<h4>Response Payload</h4>
+<p>Irrespective of whether the method fails or executes successfully, there 
+ is no response.</p>
+<table class="Table_Note" cellspacing="0" bgcolor="#DBDBDB">
+	<col width="588" />
+	<tr class="t1st">
+		<td><h4>Note</h4></td>
+	</tr>
+	<tr>
+		<td><ul style="list-style: disc;">
+			<li><p>Retrieves the caller information.</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>
